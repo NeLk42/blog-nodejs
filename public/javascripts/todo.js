@@ -4,7 +4,9 @@
 function TodoCtrl($scope) {
     $scope.todos = [
         {text: 'learn angular', done: true},
-        {text: 'build an angular app', done: false}
+        {text: 'build an angular app', done: true},
+        {text: 'store ToDos in a MongoDB', done: false},
+        {text: 'learn angular / nodejs / express / ejs in depth', done: false}
     ];
 
     $scope.addTodo = function () {
