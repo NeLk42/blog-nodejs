@@ -8,6 +8,8 @@ var http = require('http');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var about = require('./routes/about');
+var todo = require('./routes/todo');
 
 var app = express();
 
@@ -29,6 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.get('/about', about.about);
+app.get('/todo', todo.todo);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
